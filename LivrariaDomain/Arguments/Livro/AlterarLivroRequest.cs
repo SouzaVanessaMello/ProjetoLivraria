@@ -1,15 +1,10 @@
-﻿using LivrariaDomain.Interfaces.Arguments;
-using LivrariaDomain.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
 namespace LivrariaDomain.Arguments.Livro
 {
-    public class AdicionarLivroRequest : IRequest
+    public class AlterarLivroRequest
     {
+        public Guid Id { get; set; }
         public string Isbn { get; set; }
         public string PrimeiroNomeAutor { get; set; }
         public string UltimoNomeAutor { get; set; }

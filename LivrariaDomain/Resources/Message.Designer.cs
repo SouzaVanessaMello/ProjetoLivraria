@@ -61,6 +61,24 @@ namespace LivrariaDomain.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to É obrigatório o preenchimento do campo {0}..
+        /// </summary>
+        internal static string E_OBRIGATORIO_PREENCHIMENTO_DE_X0 {
+            get {
+                return ResourceManager.GetString("E_OBRIGATORIO_PREENCHIMENTO_DE_X0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to É obrigatório o preenchimento de todos os campos..
+        /// </summary>
+        internal static string E_OBRIGATORIO_PREENCHIMENTO_TODOS_CAMPOS {
+            get {
+                return ResourceManager.GetString("E_OBRIGATORIO_PREENCHIMENTO_TODOS_CAMPOS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Já existe um livro com o ISBN {0}..
         /// </summary>
         internal static string JA_EXISTE_UM_LIVRO_COM_ISBN_X0 {

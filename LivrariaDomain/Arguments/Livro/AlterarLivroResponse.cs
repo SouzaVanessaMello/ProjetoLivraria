@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LivrariaDomain.Arguments.Livro
 {
-    class AlterarLivroResponse
+    public class AlterarLivroResponse
     {
     }
 }
