@@ -1,8 +1,9 @@
-﻿using LivrariaDomain.Enum;
+﻿using LivrariaDomain.Entities.Base;
+using LivrariaDomain.Enum;
 using LivrariaDomain.ValueObjects;
 namespace LivrariaDomain.Entities
 {
-    public class Usuario 
+    public class Usuario : BaseEntity
     {
         public Nome Nome { get; set; }
         public Email Email { get; set; }

@@ -12,7 +12,7 @@ namespace LivrariaDomain.Arguments.BaseResponse
         public string Mensagem { get; set; }
 
 
-        public static explicit operator BaseResponse(Livro entidade)
+        public static explicit operator BaseResponse(Entities.Livro entidade)
         {
             return new BaseResponse()
             {
