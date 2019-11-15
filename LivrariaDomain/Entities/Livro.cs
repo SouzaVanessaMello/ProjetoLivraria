@@ -9,7 +9,7 @@ namespace LivrariaDomain.Entities
     {
         // ISBN, Autor, Nome, Preço, Data Publicação, Imagem da Capa
         public ISBN Isbn  { get; set; }
-        public List<Nome> AutorCollection { get; set; }
+        public Nome  Autor { get; set; }
         public string Nome { get; set; }
         public float Preço { get; set; }
         public DateTime DataPublicacao { get; set; }

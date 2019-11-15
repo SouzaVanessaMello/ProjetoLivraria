@@ -1,12 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LivrariaDomain.Arguments.Livro
+﻿namespace LivrariaDomain.Arguments.Livro
 {
-    class AdicionarLivroResponse
+    public class AdicionarLivroResponse : BaseResponse.BaseResponse
     {
+        //public Guid Id { get; set; }
+
+        //public string Message { get; set; }
+
+        //public static explicit operator AdicionarLivroResponse (Entities.Livro entity)
+        //{
+        //    return new AdicionarLivroResponse()
+        //    {
+        //        Id = entity.Id,
+        //        Message = Resources.Message.OPERACAO_REALIZADA_COM_SUCESSO
+        //    };
+        //}
     }
+    
 }

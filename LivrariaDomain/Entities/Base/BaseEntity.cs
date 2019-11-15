@@ -10,5 +10,6 @@ namespace LivrariaDomain.Entities.Base
             Id = Guid.NewGuid();
         }
         public Guid Id { get; private set; }
+        //public string Mensagem { get; set; }
     }
 }
