@@ -1,7 +1,9 @@
 ﻿using LivrariaDomain.Entities.Base;
+using LivrariaDomain.Resources;
 using LivrariaDomain.ValueObjects;
+using prmToolkit.NotificationPattern;
+using prmToolkit.NotificationPattern.Extensions;
 using System;
-using System.Collections.Generic;
 
 namespace LivrariaDomain.Entities
 {
@@ -15,9 +17,26 @@ namespace LivrariaDomain.Entities
             public DateTime DataPublicacao { get; set; }
             public string ImagemDaCapa { get; set; }
 
-        public Livro( )
+        public Livro(ISBN isbn, Nome autor, string nome, float preço, DateTime dataPublicacao, string imagemDaCapa )
         {
+            Isbn = isbn;
+            Autor = autor;
+            Nome = nome;
+            Preço = preço;
+            DataPublicacao = dataPublicacao;
+            ImagemDaCapa = imagemDaCapa;
+
+            ValidarEntidade();
+
+            AddNotifications(autor, isbn);
 
         }
+        private void ValidarEntidade()
+        {
+            new AddNotifications<Livro>(this)
+                .IfNullOrInvalidLength(x => x.Nome, 1, 100, Message.O_PREENCHIMENTO_CAMPO_X0_E_OBRIGATORIO_E_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERES.ToFormat("Nome", "1", "100"));
+        }
+
+
     }
 }

@@ -88,6 +88,15 @@ namespace LivrariaDomain.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to O preenchimento do campo {0} é obrigatório e deve conter entre {1} e {2} caracteres..
+        /// </summary>
+        internal static string O_PREENCHIMENTO_CAMPO_X0_E_OBRIGATORIO_E_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERES {
+            get {
+                return ResourceManager.GetString("O_PREENCHIMENTO_CAMPO_X0_E_OBRIGATORIO_E_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Operação realizada com sucesso..
         /// </summary>
         internal static string OPERACAO_REALIZADA_COM_SUCESSO {

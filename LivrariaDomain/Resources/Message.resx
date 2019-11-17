@@ -129,4 +129,7 @@
   <data name="OPERACAO_REALIZADA_COM_SUCESSO" xml:space="preserve">
     <value>Operação realizada com sucesso.</value>
   </data>
+  <data name="O_PREENCHIMENTO_CAMPO_X0_E_OBRIGATORIO_E_DEVE_CONTER_ENTRE_X1_E_X2_CARACTERES" xml:space="preserve">
+    <value>O preenchimento do campo {0} é obrigatório e deve conter entre {1} e {2} caracteres.</value>
+  </data>
 </root>

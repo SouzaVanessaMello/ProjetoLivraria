@@ -27,7 +27,7 @@ namespace LivrariaDomain.Services
                 return null;
             }
 
-            var livro = new Livro (request.Isbn, request.Nome, request.Preço, request.PrimeiroNomeAutor, request.UltimoNomeAutor);
+            var livro = new Livro (request.Isbn, request.Nome, request.Preço, request.PrimeiroNomeAutor, request.UltimoNomeAutor, request.DataPublicacao, request.ImagemDaCapa);
         }
 
 
