@@ -1,9 +1,4 @@
-﻿using LivrariaDomain.ValueObjects;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
 namespace LivrariaDomain.Arguments.Livro
 {
@@ -16,19 +11,19 @@ namespace LivrariaDomain.Arguments.Livro
         public DateTime DataPublicacao { get; set; }
         public string ImagemDaCapa { get; set; }
         
-        public static explicit operator LivroResponse (Entities.Livro entity)
-        {
-            return new LivroResponse()
-            {
-                Nome = entity.Nome,
-                Isbn = entity.Isbn.NumeroIsbn,
-                NomeAutor = entity.Autor.PrimeiroNome + " " + entity.Autor.Sobrenome,
-                DataPublicacao = entity.DataPublicacao,
-                //ImagemDaCapa = entity.ImagemDaCapa,
-                Preço = entity.Preço
+        //public static explicit operator LivroResponse (Entities.Livro entity)
+        //{
+        //    return new LivroResponse()
+        //    {
+        //        Nome = entity.Nome,
+        //        Isbn = entity.Isbn.NumeroIsbn,
+        //        NomeAutor = entity.Autor.PrimeiroNome + " " + entity.Autor.Sobrenome,
+        //        DataPublicacao = entity.DataPublicacao,
+        //        //ImagemDaCapa = entity.ImagemDaCapa,
+        //        Preço = entity.Preço
 
-            };
-        }
+        //    };
+        //}
 
     }
 }

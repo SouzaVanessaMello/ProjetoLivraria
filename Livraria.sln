@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivrariaDomain", "LivrariaDomain\LivrariaDomain.csproj", "{47CA2F69-38A9-4E0D-86E4-9E9D67F66C66}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivrariaInfra", "LivrariaInfra\LivrariaInfra.csproj", "{4F135A7D-17B9-464A-B1DD-4036AC45963D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivrariaIoC", "LivrariaIoC\LivrariaIoC.csproj", "{CD3FB5AB-93E4-4C48-A9BD-C7D3006E9E9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{47CA2F69-38A9-4E0D-86E4-9E9D67F66C66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47CA2F69-38A9-4E0D-86E4-9E9D67F66C66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47CA2F69-38A9-4E0D-86E4-9E9D67F66C66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F135A7D-17B9-464A-B1DD-4036AC45963D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F135A7D-17B9-464A-B1DD-4036AC45963D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F135A7D-17B9-464A-B1DD-4036AC45963D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F135A7D-17B9-464A-B1DD-4036AC45963D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD3FB5AB-93E4-4C48-A9BD-C7D3006E9E9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD3FB5AB-93E4-4C48-A9BD-C7D3006E9E9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD3FB5AB-93E4-4C48-A9BD-C7D3006E9E9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD3FB5AB-93E4-4C48-A9BD-C7D3006E9E9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

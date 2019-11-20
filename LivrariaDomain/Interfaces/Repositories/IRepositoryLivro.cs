@@ -6,5 +6,6 @@ namespace LivrariaDomain.Interfaces.Repositories
 {
     public interface IRepositoryLivro : IRepositoryBase<Livro, Guid>
     {
+        
     }
 }

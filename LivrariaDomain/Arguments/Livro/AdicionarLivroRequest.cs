@@ -1,10 +1,5 @@
 ﻿using LivrariaDomain.Interfaces.Arguments;
-using LivrariaDomain.ValueObjects;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LivrariaDomain.Arguments.Livro
 {
@@ -12,8 +7,8 @@ namespace LivrariaDomain.Arguments.Livro
     {
         public string Isbn { get; set; }
         public string PrimeiroNomeAutor { get; set; }
-        public string UltimoNomeAutor { get; set; }
-        public string Nome { get; set; }
+        public string SobrenomeAutor { get; set; }
+        public string NomeLivro { get; set; }
         public float Preço { get; set; }
         public DateTime DataPublicacao { get; set; }
         public string ImagemDaCapa { get; set; }

@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DADOS_NAO_ENCONTRADOS" xml:space="preserve">
+    <value>Dados não encontrados.</value>
+  </data>
   <data name="E_OBRIGATORIO_PREENCHIMENTO_DE_X0" xml:space="preserve">
     <value>É obrigatório o preenchimento do campo {0}.</value>
   </data>

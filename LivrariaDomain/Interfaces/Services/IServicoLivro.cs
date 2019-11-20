@@ -9,8 +9,11 @@ namespace LivrariaDomain.Interfaces.Services
     public interface IServicoLivro : IServiceBase
     {
         IEnumerable<LivroResponse> ListarLivro();
+
         AdicionarLivroResponse AdicionarLivro(AdicionarLivroRequest request);
+
         BaseResponse AlterarLivro(AlterarLivroRequest request);
+
         BaseResponse ExcluirLivro(Guid id);
     }
 }

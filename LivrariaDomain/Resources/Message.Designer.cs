@@ -61,6 +61,15 @@ namespace LivrariaDomain.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dados não encontrados..
+        /// </summary>
+        internal static string DADOS_NAO_ENCONTRADOS {
+            get {
+                return ResourceManager.GetString("DADOS_NAO_ENCONTRADOS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to É obrigatório o preenchimento do campo {0}..
         /// </summary>
         internal static string E_OBRIGATORIO_PREENCHIMENTO_DE_X0 {
