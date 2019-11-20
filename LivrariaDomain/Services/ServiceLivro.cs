@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using LivrariaDomain.Arguments.BaseResponse;
 using LivrariaDomain.Arguments.Livro;
 using LivrariaDomain.Entities;
@@ -12,7 +13,7 @@ using prmToolkit.NotificationPattern.Extensions;
 
 namespace LivrariaDomain.Services
 {
-    public class ServiceLivro : Notifiable, IServicoLivro
+    public class ServiceLivro : Notifiable, IServiceLivro
     {
         private readonly IRepositoryLivro _repositoryLivro;
 
@@ -21,7 +22,7 @@ namespace LivrariaDomain.Services
             _repositoryLivro = repositoryLivro;    
         }
 
-        AdicionarLivroResponse IServicoLivro.AdicionarLivro(AdicionarLivroRequest request)
+        AdicionarLivroResponse IServiceLivro.AdicionarLivro(AdicionarLivroRequest request)
         {
             var nomeAutor = new Nome(request.PrimeiroNomeAutor, request.SobrenomeAutor);
             var isbn = new ISBN(request.Isbn);
@@ -44,7 +45,7 @@ namespace LivrariaDomain.Services
         }
 
 
-        BaseResponse IServicoLivro.AlterarLivro(AlterarLivroRequest request)
+        AlterarLivroResponse IServiceLivro.AlterarLivro(AlterarLivroRequest request)
         {
             if (request == null)
             {
@@ -69,22 +70,34 @@ namespace LivrariaDomain.Services
 
             var nomeAutor = new Nome(request.PrimeiroNomeAutor, request.SobrenomeAutor);
             var isbn = new ISBN(request.Isbn);
-            new Livro(isbn, nomeAutor, request.NomeLivro, request.Preço, request.DataPublicacao, request.ImagemDaCapa);
+
+            Livro novoLivro = new Livro(isbn, nomeAutor, request.NomeLivro, request.Preço, request.DataPublicacao, request.ImagemDaCapa);
 
             AddNotifications(nomeAutor, isbn);
 
+            _repositoryLivro.ToEdit(novoLivro);
 
+            return (AlterarLivroResponse)livro;
 
         }
 
-        BaseResponse IServicoLivro.ExcluirLivro(Guid id)
+        BaseResponse IServiceLivro.ExcluirLivro(Guid id)
         {
-            throw new NotImplementedException();
+            Livro livro = _repositoryLivro.GetBy(id);
+            
+            if (livro == null)
+            {
+                AddNotification("Id", Message.DADOS_NAO_ENCONTRADOS);
+                return null;
+            }
+            _repositoryLivro.ToRemove(livro);
+
+            return new BaseResponse();
         }
 
-        IEnumerable<LivroResponse> IServicoLivro.ListarLivro()
+        IEnumerable<LivroResponse> IServiceLivro.ListarLivro()
         {
-            throw new NotImplementedException();
+            return _repositoryLivro.ToList().ToList().Select(livro => (LivroResponse)livro);
         }
     }
 }

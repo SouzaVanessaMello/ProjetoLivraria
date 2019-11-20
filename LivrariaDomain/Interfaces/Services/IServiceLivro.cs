@@ -6,13 +6,13 @@ using System.Collections.Generic;
 
 namespace LivrariaDomain.Interfaces.Services
 {
-    public interface IServicoLivro : IServiceBase
+    public interface IServiceLivro : IServiceBase
     {
         IEnumerable<LivroResponse> ListarLivro();
 
         AdicionarLivroResponse AdicionarLivro(AdicionarLivroRequest request);
 
-        BaseResponse AlterarLivro(AlterarLivroRequest request);
+        AlterarLivroResponse AlterarLivro(AlterarLivroRequest request);
 
         BaseResponse ExcluirLivro(Guid id);
     }
